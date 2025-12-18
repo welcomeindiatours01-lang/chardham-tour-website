@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Char Dham Yatra Tour Packages | Welcome India Tours</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffe0d1;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1612438214708-f428a707dd4e?w=1600') center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #ff6b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,107,53,0.4);
+}
+
+.about {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff6b35;
+}
+
+.about p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+}
+
+.temples {
+    padding: 80px 0;
+}
+
+.temples h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.temple-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.temple-card:hover {
+    transform: translateY(-10px);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.temple-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: #ff6b35;
+    font-size: 1.5rem;
+}
+
+.temple-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+}
+
+.packages {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.packages h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.package-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+}
+
+.package-card.featured {
+    border: 3px solid #ff6b35;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #ff6b35;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.package-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.duration {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.old-price {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features li {
+    padding: 0.5rem 0;
+    color: #666;
+}
+
+.book-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #ff6b35;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.book-btn:hover {
+    background: #e55a2b;
+}
+
+.why-choose {
+    padding: 80px 0;
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #666;
+}
+
+.contact {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #e55a2b;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .package-card.featured {
+        transform: scale(1);
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🕉️ Char Dham Yatra</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#temples">Temples</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Char Dham Yatra</h1>
+            <p>Experience the Divine Journey to the Four Sacred Shrines</p>
+            <a href="#packages" class="cta-button">Book Your Yatra Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Char Dham Yatra</h2>
+            <p>The Char Dham Yatra is one of the most sacred pilgrimages in Hinduism, comprising four holy sites in the Himalayas: Yamunotri, Gangotri, Kedarnath, and Badrinath. This spiritual journey takes you through breathtaking landscapes and ancient temples, offering a unique blend of devotion and natural beauty.</p>
+            <p>Our carefully curated tour packages ensure a comfortable and memorable pilgrimage experience with expert guides, quality accommodation, and complete travel arrangements.</p>
+        </div>
+    </section>
+
+    <section id="temples" class="temples">
+        <div class="container">
+            <h2>The Four Sacred Dhams</h2>
+            <div class="temple-grid">
+                <div class="temple-card">
+                    <img src="https://images.unsplash.com/photo-1609151745346-c624e507baa2?w=800" alt="Yamunotri Temple">
+                    <h3>Yamunotri</h3>
+                    <p>The source of the Yamuna River, dedicated to Goddess Yamuna. Located at an altitude of 3,293 meters.</p>
+                </div>
+                <div class="temple-card">
+                    <img src="https://images.unsplash.com/photo-1761765682857-f9aca868c002?w=800" alt="Gangotri Temple">
+                    <h3>Gangotri</h3>
+                    <p>The origin of the holy Ganges River, dedicated to Goddess Ganga. Situated at 3,100 meters above sea level.</p>
+                </div>
+                <div class="temple-card">
+                    <img src="https://images.unsplash.com/photo-1649147313351-c86537fda0eb?w=800" alt="Kedarnath Temple">
+                    <h3>Kedarnath</h3>
+                    <p>One of the twelve Jyotirlingas of Lord Shiva, located at 3,583 meters in the Garhwal Himalayas.</p>
+                </div>
+                <div class="temple-card">
+                    <img src="https://images.unsplash.com/photo-1601821139314-66a4d14cfc00?w=800" alt="Badrinath Temple">
+                    <h3>Badrinath</h3>
+                    <p>Dedicated to Lord Vishnu, one of the Char Dhams. Located at 3,300 meters in the Chamoli district.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2>Our Tour Packages</h2>
+            <div class="package-grid">
+                <div class="package-card">
+                    <h3>Do Dham Yatra</h3>
+                    <div class="duration">5 Days / 4 Nights</div>
+                    <div class="price">₹13,500 <span class="old-price">₹15,000</span></div>
+                    <ul class="features">
+                        <li>✓ Kedarnath & Badrinath</li>
+                        <li>✓ Comfortable Accommodation</li>
+                        <li>✓ All Meals Included</li>
+                        <li>✓ Transportation</li>
+                        <li>✓ Expert Guide</li>
+                    </ul>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+
+                <div class="package-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Char Dham Yatra</h3>
+                    <div class="duration">10 Days / 9 Nights</div>
+                    <div class="price">₹28,500 <span class="old-price">₹30,000</span></div>
+                    <ul class="features">
+                        <li>✓ All Four Dhams</li>
+                        <li>✓ Deluxe Accommodation</li>
+                        <li>✓ All Meals Included</li>
+                        <li>✓ AC Transportation</li>
+                        <li>✓ Expert Guide</li>
+                        <li>✓ Helicopter Option Available</li>
+                    </ul>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+
+                <div class="package-card">
+                    <h3>Luxury Char Dham</h3>
+                    <div class="duration">12 Days / 11 Nights</div>
+                    <div class="price">₹48,500 <span class="old-price">₹50,000</span></div>
+                    <ul class="features">
+                        <li>✓ All Four Dhams</li>
+                        <li>✓ 5-Star Hotels</li>
+                        <li>✓ Premium Meals</li>
+                        <li>✓ Luxury AC Vehicles</li>
+                        <li>✓ Personal Guide</li>
+                        <li>✓ Helicopter Services</li>
+                        <li>✓ VIP Darshan</li>
+                    </ul>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="icon">🏔️</div>
+                    <h3>Expert Guidance</h3>
+                    <p>Experienced guides with deep knowledge of the region</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">🏨</div>
+                    <h3>Quality Stay</h3>
+                    <p>Comfortable accommodations at every destination</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">🚗</div>
+                    <h3>Safe Travel</h3>
+                    <p>Well-maintained vehicles with experienced drivers</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive rates with no hidden charges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>📞 Phone: +91 98765 43210</p>
+                    <p>📧 Email: welcomeindiatours01@gmail.com</p>
+                    <p>📍 Address: Haridwar, Uttarakhand, India</p>
+                    <p>⏰ Working Hours: 9:00 AM - 8:00 PM (All Days)</p>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will contact you soon.'); this.reset();">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select required>
+                            <option value="">Select Package</option>
+                            <option value="do-dham">Do Dham Yatra</option>
+                            <option value="char-dham">Char Dham Yatra</option>
+                            <option value="luxury">Luxury Char Dham</option>
+                        </select>
+                        <textarea placeholder="Your Message" rows="4"></textarea>
+                        <button type="submit" class="submit-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Char Dham Yatra Tours. All Rights Reserved.</p>
+            <p>Managed by Welcome India Tours</p>
+        </div>
+    </footer>
+
+    <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+    </script>
+</body>
+</html>
